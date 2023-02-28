@@ -1,0 +1,80 @@
+<div class="main">
+  <div class="HeadLines">
+    <h1 *ngIf="Index == 1">Mobile Phones</h1>
+    <h1 *ngIf="Index == 2">Tablet</h1>
+    <h1 *ngIf="Index == 3">Smart Watches</h1>
+    <h1 *ngIf="Index == 4">Televsion</h1>
+    <h1 *ngIf="Index == 5">Desktops</h1>
+    <h1 *ngIf="Index == 6">Procesors</h1>
+    <h1 *ngIf="Index == 7">Laptops</h1>
+    <h1 *ngIf="Index == 8">Graphics Cards</h1>
+    <h1 *ngIf="Index == 9">Gaming Console</h1>
+    <h1 *ngIf="Index == 10">Console Accessories</h1>
+    <h1 *ngIf="Index == 11">Keyboards</h1>
+    <h1 *ngIf="Index == 12">Mouses</h1>
+    <h1 *ngIf="Index == 13">Monitors</h1>
+    <h1 *ngIf="Index == 14">Speakers</h1>
+    <h1 *ngIf="Index == 15">Headphones</h1>
+  
+  </div>
+  <div class="MainFilter">
+  <div class="filter">
+    <div>
+     <label for="">Order By</label>
+     <select id="sort-by" (change)="sort($event)">
+      <option value="" selected disabled hidden>Sort By</option>
+      <option value="Name"></option>
+      <option value="Low">Show Low to High Price</option>
+      <option value="High">Show High to Low Price</option>
+  </select>
+    </div>
+
+    <div>
+     <label for="">Show</label>
+      <select (change)="FilterMax($event)">
+        <option value=""></option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+      </select>
+    </div>
+
+  </div>
+
+
+  </div>
+  <div class="Products">
+    <div class="page-inner" *ngFor="let item of items" >
+      <div class="row">
+        <div class="el-wrapper">
+          <div class="box-up" (click)="NavigateToDetailes(item.id)">
+            <img class="img" src="{{item.imgUrl}}" alt="">
+            <div class="img-info">
+              <div class="info-inner">
+                <span class="p-name">{{item.name}}</span>
+              </div>
+              
+            </div>
+          </div>
+  
+          <div class="box-down">
+            <div class="h-bg">
+              <div class="h-bg-inner"></div>
+            </div>
+  
+            <a class="cart" (click)="AddToCart(item)">
+              <span class="price">${{item.price}}</span>
+              <span class="add-to-cart">
+                <span class="txt">Add in cart</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

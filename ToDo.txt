@@ -1,0 +1,5 @@
+make the filter happeing in the frontend 
+make aa 2 lists 
+
+1 is the main list where list 2 can take inform
+list 2 = list 1 .(filter => filter.blah == blah)

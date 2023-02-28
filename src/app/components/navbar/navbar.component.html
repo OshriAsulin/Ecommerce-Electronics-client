@@ -1,0 +1,44 @@
+<div class="navbar">
+    <div class="Mainbuttons">     
+        <a class="productsbutton" routerLink=""><span class="material-symbols-outlined" >
+            home
+        </span>Home</a>
+        <a (click)="ClickShowMenu()" class="productsbutton"><span class="material-symbols-outlined"> menu
+        </span>Shop By Category</a>
+        
+        
+        
+        <input class="Search" type="text" (input)="DisplayItemsDiv(searchBox.value)" [(ngModel)]="SearchText" #searchBox placeholder="Search on Electronics"/>
+        <button class="srcbtn" (click)="itemsDiv = false" (click)="SearchText = ''">X</button>
+        <div class="FilterItems" *ngIf="itemsDiv">
+            <div class="itemDiv" id="itemDiv" *ngFor="let item of items | filter : SearchText" >
+                
+                <a routerLink="/Details/{{item.id}}" (click)="itemsDiv = false"><img src="{{item.imgUrl}}" />{{item.name}}<br>{{item.price}}$</a>
+                
+            </div>
+    
+        </div>
+        
+        
+        
+        
+        
+        <a class="rightbutton" routerLink="/Cart"><span class="material-symbols-outlined">shopping_cart</span>{{counter}}</a>
+        <a class="rightbutton" (click)="OCAccountMenu()"><span class="material-symbols-outlined">person</span></a>
+        <a class="rightbutton" routerLink="/Add" *ngIf="IsAdmin == 'true' " >Admin</a>
+    </div>
+    
+    
+</div>
+
+
+
+<div class="accountmenu" *ngIf="AccountMenu">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/account-icon.png" >
+    <p *ngIf="IsLoggedIn">{{userName}}</p>
+    <button class="button-81"  routerLink="/EditAccount/0" *ngIf="IsLoggedIn">Account</button>
+    <button class="button-81"  (click)="Login()" *ngIf="!IsLoggedIn" >Login</button>
+    <button class="button-81" routerLink="/register" *ngIf="!IsLoggedIn" >Register</button>
+    <button class="button-81" *ngIf="IsLoggedIn" (click)="Logout()">Logout</button>
+</div>
+

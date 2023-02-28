@@ -1,0 +1,33 @@
+.Main{
+
+     display: flex;
+     overflow: hidden;
+     width: 100vw;
+     min-height:calc(100vh - 80px);
+     position: absolute;
+     margin: 80px 0px 0px 0px;
+     background-color: #ffff;
+}
+
+.filter{
+    position: relative;
+    border-right: solid 1.8px rgba(17, 17, 17, 0.644) ;
+    max-width: 450px;
+    width: 20%;
+    min-width: 300px;
+  
+
+}
+
+.products{
+    
+    width: 100vw;
+}
+
+@media (max-width: 450px) {
+    .filter { display: none;
+    }
+    
+  }
+  
+

@@ -1,0 +1,206 @@
+
+<div class="Main">
+  <div class="product">
+      <div class="Width">
+      <img src="{{Data.imgUrl}}"/>
+      <div class="specs">
+        <h2>Item Specifics :</h2>
+
+        <div>
+          <div class="specrow"> 
+            <p class="leftside">Manufacturer</p>
+            <p class="rightside">{{Data.manufacturer}}</p>
+          </div>
+        </div>
+
+        <div *ngIf="Data.operationSystem != 'None' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Operation System</p>
+            <p class="rightside">{{Data.operationSystem}}</p>
+          </div>
+        </div>
+
+       <div *ngIf="Data.Storage != 'None' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Storage</p>
+            <p class="rightside">{{Data.storage}}</p>
+          </div>
+        </div>
+
+        <div *ngIf="Data.Cores != 0 ">
+        <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Cores</p>
+            <p class="rightside">{{Data.cores}}</p>
+          </div>
+        </div>
+        
+        <div *ngIf="Data.Category == 'VideoGame_Console' && 'Procesor_PC' && 'GraphicsCard_PC' &&'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+              && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Cpu Name</p>
+            <p class="rightside">{{Data.cpuName}}</p>
+          </div>
+        </div>
+        <div *ngIf="Data.Category == 'VideoGame_Console' && 'Procesor_PC' && 'GraphicsCard_PC' &&'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+              && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">
+                  <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Cpu Type</p>
+            <p class="rightside">{{Data.cpuType}}</p>
+          </div>
+        </div>
+
+
+        <div *ngIf="Data.Category ==   'Procesor_PC' && 'Smart_Watches' && 'Tablet' && 'GraphicsCard_PC' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+               && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones' && 'Accessories_Console' ">       
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Gpu Name</p>
+            <p class="rightside">{{Data.gpuName}}</p>
+          </div>
+        </div>
+
+
+
+        <div *ngIf="Data.Category ==   'Procesor_PC' && 'Smart_Watches' && 'Tablet' && 'GraphicsCard_PC' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+              && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones' && 'Accessories_Console' ">  
+           <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Gpu Type</p>
+            <p class="rightside">{{Data.gpuType}}</p>
+          </div>
+        </div>
+
+
+
+        <div *ngIf="Data.Category == 'VideoGame_Console' && 'Procesor_PC' && 'GraphicsCard_PC' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+              && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones' && 'Accessories_Console' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Inch</p>
+            <p class="rightside">{{Data.inch}}</p>
+          </div>
+        </div>
+
+
+
+
+        <div *ngIf="Data.Category == 'VideoGame_Console' && 'Televsion' && 'Procesor_PC' && 'GraphicsCard_PC' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+              && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">MilliampHours</p>
+            <p class="rightside">{{Data.milliampHours}}</p>
+          </div>
+        </div>
+
+
+
+
+        <div *ngIf="Data.Category == 'VideoGame_Console' ||  'Procesor_PC' || 'GraphicsCard_PC' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Mouse'
+        || 'ComputerAccessories_Monitor' ||  'ComputerAccessories_Speakers' || 'ComputerAccessories_Headphones' || 'Accessories_Console' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Panel</p>
+            <p class="rightside">{{Data.panel}}</p>
+          </div>
+        </div>
+
+
+
+
+        <div *ngIf="Data.Category ==  'Procesor_PC' && 'GraphicsCard_PC' &&'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
+        && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Threades</p>
+            <p class="rightside">{{Data.threads}}</p>
+          </div>
+        </div>
+
+
+
+
+
+        <div>
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Type</p>
+            <p class="rightside">{{Data.type}}</p>
+          </div>
+        </div>
+
+
+
+
+
+        <div *ngIf="Data.Category == 'VideoGame_Console' || 'Procesor_PC' || 'GraphicsCard_PC' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Mouse'
+        || 'ComputerAccessories_Monitor' ||  'ComputerAccessories_Speakers' || 'ComputerAccessories_Headphones' || 'Accessories_Console' ">
+          <div class="line"></div>
+          <div class="specrow"> 
+            <p class="leftside">Size</p>
+            <p class="rightside">{{Data.sizeMM}}</p>
+          </div>
+        </div>
+
+       
+      </div>
+      
+    </div>
+    <div>   
+      <div class="container">
+        <h2>{{Data.name}}</h2>
+        <div class="line"></div>
+        <p>Manufacturer : {{Data.manufacturer}}</p>
+        <p>Release Date : {{Data.releaseDate | date: 'dd/MM/yyyy'}}</p>
+        <p>Color : {{Data.color}}</p>
+        <p>Description: {{Data.description}}</p>
+        <div class="line"></div>
+        
+      </div>
+      <h3>Price : {{Data.price}}$</h3>
+      <button (click)="AddToCart(Data)">Add To Cart<span  class="material-symbols-outlined">
+        add_shopping_cart
+      </span></button>
+    </div>
+  </div>
+  
+  <h2 class="Head">Products Like:</h2>
+  <div class="pack">
+
+    <div class="Lineofproducts">
+      <div class="page-inner" *ngFor="let item of list ; let i = index ;"   >
+        <div class="row" *ngIf="i < 6" >
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="{{ item.imgUrl }}" alt="" />
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">{{ item.name }}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+              
+              <a class="cart" (click)="AddToCart(item)">
+                <span class="price">${{ item.price }}</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>

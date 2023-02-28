@@ -1,0 +1,139 @@
+<div class="main">
+  <div class="container">
+    <div class="slider-discounts">
+      <img src="https://www.sie.com/tachyon/sites/15/2020/10/SIE-Blog_Featured-Image_PS5Launch_2020_1028.jpg?resize=1088%2C612&crop_strategy=smart" />
+
+      <div class="Products">
+        <h2 >Discount</h2>
+        <div class="pal">
+          <div class="page-inner" *ngFor="let item of dicounted1">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                  <img class="img" src="{{ item.imgUrl }}" alt="" />
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-name">{{ item.name }}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+
+                  <a class="cart" (click)="AddToCart(item)">
+                    <span class="price">${{ item.price }}</span>
+                    <span class="add-to-cart">
+                      <span class="txt">Add in cart</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space"></div>
+        <div class="pal">
+          <div class="page-inner" *ngFor="let item of dicounted2">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                  <img class="img" src="{{ item.imgUrl }}" alt="" />
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-name">{{ item.name }}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+
+                  <a class="cart" (click)="AddToCart(item)">
+                    <span class="price">${{ item.price }}</span>
+                    <span class="add-to-cart">
+                      <span class="txt">Add in cart</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <a routerLink="/Category/1" class="head">Mobile Phones</a>
+      <div class="Lineofproducts">
+        <div class="page-inner" *ngFor="let item of mobilePhones">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                <img class="img" src="{{ item.imgUrl }}" alt="" />
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{ item.name }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" (click)="AddToCart(item)">
+                  <span class="price">${{ item.price }}</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2></h2>
+    </div>
+    <div class="line"></div>
+    <div>
+      <a class="head">Gaming Consoles</a>
+      <div class="Lineofproducts">
+        <div class="page-inner" *ngFor="let item of gamingConsole">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                <img class="img" src="{{ item.imgUrl }}" alt="" />
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{ item.name }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart">
+                  <span class="price">${{ item.price }}</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <h2></h2>
+    </div>
+  </div>
+</div>

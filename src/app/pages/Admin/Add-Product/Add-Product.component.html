@@ -1,0 +1,132 @@
+<div class="container">
+  <div>
+    <div class="row">
+      <h4>Add a Product</h4>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Name" name="Name" #Name />
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Description" name="Description" #Description />
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Image Url" name="imgUrl" #ImgUrl />
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="number" placeholder="Price" name="Price" #Price maxlength="8"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+
+      <div class="row">
+        <div class="col-half">
+          <h4>Color</h4>
+          <select name="Color" #Color (change)="SelectedColor(Color.value)">
+            <option value="0">None</option>
+            <option value="1">Red</option>
+            <option value="2">Green</option>
+            <option value="3">Blue</option>
+            <option value="4">Purple</option>
+            <option value="5">Black</option>
+            <option value="6">White</option>
+            <option value="7">Gray</option>
+            <option value="8">Yellow</option>
+            <option value="9">Camel</option>
+            <option value="10">Brown</option>
+            <option value="11">Chrom</option>
+          </select>
+        </div>
+        <div class="col-half">
+          <h4>Manufacturer</h4>
+          <select name="Manufacturer" #Manufacturer>
+            <option value="0">Other</option>
+            <option value="1">Apple</option>
+            <option value="2">Samsung</option>
+            <option value="3">OnePlus</option>
+            <option value="4">Xiaomi</option>
+            <option value="5">Sony</option>
+            <option value="6">Microsoft</option>
+            <option value="7">Lenovo</option>
+            <option value="8">HP</option>
+            <option value="9">Dell</option>
+            <option value="10">Beats</option>
+            <option value="11">Jbl</option>
+            <option value="12">BnO</option>
+            <option value="13">Logitech</option>
+            <option value="14">Jabra</option>
+            <option value="15">Asus</option>
+            <option value="16">Razer</option>
+            <option value="17">Intel</option>
+            <option value="18">AMD</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row">
+        <h4>Release Date</h4>
+        <div class="input-group">
+
+          <input type="date" #Date>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Category</h4>
+      <div class="input-group" style="width: 200%">
+        <select #Category (change)="SelectedIndex(Category.value)" name="Category">
+          <option disabled selected>Choose Category</option>
+          <option value="0">None</option>
+          <option value="1">Mobile Phone</option>
+          <option value="2">Tablet</option>
+          <option value="3">Smart Watch</option>
+          <option value="4">Televsion</option>
+          <option value="5">Desktop PC</option>
+          <option value="6">Procesor</option>
+          <option value="7">Graphics Card</option>
+          <option value="8">Laptop</option>
+          <option value="9">Gaming Console</option>
+          <option value="10">Gaming Console Accessories</option>
+          <option value="11">Keyboard</option>
+          <option value="12">Mouse</option>
+          <option value="13">Monitor</option>
+          <option value="14">Speakers</option>
+          <option value="15">Headphones</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-group">
+
+        <app-add-mobile-phone *ngIf="index == 1" (Storage)="StorageFunc($event)" (InchSize)="InchFunc($event)"
+          (Miliamper)="MiliamperFunc($event)" (OperationSystem)="OperationSystemFunc($event)"
+          (Resolution)="ResolutionFunc($event)"></app-add-mobile-phone>
+        <app-Add-Tablet *ngIf="index == 2"></app-Add-Tablet>
+        <app-Add-SmartWatch *ngIf="index == 3" (Sizemm)="SizemmFunc($event)" (Storage)="StorageFunc($event)" (OperationSystem)="OperationSystemFunc($event)" (Miliamper)="MiliamperFunc($event)"></app-Add-SmartWatch>
+        <app-Add-Televsion *ngIf="index == 4"></app-Add-Televsion>
+        <app-Add-DesktopPC (Storage)="StorageFunc($event)" 
+        (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
+          (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" 
+          *ngIf="index == 5"></app-Add-DesktopPC>
+
+        <app-Add-Procesor *ngIf="index == 6"></app-Add-Procesor>
+        <app-Add-GraphicsCard *ngIf="index == 7"></app-Add-GraphicsCard>
+        <app-Add-Laptop *ngIf="index == 8" (Storage)="StorageFunc($event)" 
+        (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
+          (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" (Resolution)="ResolutionFunc($event)"
+          (InchSize)="InchFunc($event)" (Panel)="PanelFunc($event)" style="margin: 350px"></app-Add-Laptop>
+          
+        <app-Add-GamingConsole *ngIf="index == 9" style="margin: 350px"></app-Add-GamingConsole>
+        <app-Add-Monitor *ngIf="index == 13"></app-Add-Monitor>
+
+
+    </div>
+    <div>
+      <button class="addBtn"
+        (click)="AddProduct(Name.value,Description.value,Price.value,Color.value,Manufacturer.value,Category.value,ImgUrl.value,Date.valueAsDate)">Add
+        New Product</button>
+    </div>
+  </div>
+</div>
